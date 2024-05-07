@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "NLW Novo 2",
+    "details": "Um evento para programadores",
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/5318e1b6-c290-4415-87cd-323a5113eb2e/attendees
+Content-Type: application/json
+
+{
+    "name": "Renan Rosa",
+    "email": "renan@gmail.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/5318e1b6-c290-4415-87cd-323a5113eb2e
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/5318e1b6-c290-4415-87cd-323a5113eb2e/attendees?query=renan
